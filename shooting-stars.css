@@ -11,7 +11,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: url(./assets/star-night-background.jpeg);
     background-position-x: center;
     background-size: cover;
@@ -75,46 +75,46 @@ span.star:nth-child(1){
 }
 
 span.star:nth-child(2){
-    top: 0;
-    right: 80px;
+    top: 20;
+    right: 50%;
     left:initial;
     animation-delay:0.2s;
     animation-duration: 3s;
 }
 
 span.star:nth-child(3){
-    top: 80px;
-    right: 0px;
+    top: 5%;
+    right: 40%;
     left:initial;
     animation-delay:0.4s ;
     animation-duration: 2s;
 }
 
 span.star:nth-child(4){
-    top: 0;
-    right: 180px;
+    top: 68%;
+    right: 50%;
     left:initial;
     animation-delay:0.6s;
     animation-duration: 1.5s;
 }
 
 span.star:nth-child(5){
-    top: 0;
-    right: 400px;
+    top: 40%;
+    right: 40%;
     left:initial;
     animation-delay:0.8s;
     animation-duration: 2.5s;
 }
 
 span.star:nth-child(6){
-    top: 0;
-    right: 600px;
+    top: 20%;
+    right: 60%;
     left:initial;
     animation-delay:1s ;
     animation-duration: 3s;
 }
 span:nth-child(7 ){
-    top: 300px;
+    top: 30%;
     right: 0px;
     left:initial;
     animation-delay:1s ;
@@ -122,24 +122,24 @@ span:nth-child(7 ){
 }
 
 span.star:nth-child(8){
-    top: 0px;
-    right: 700px;
+    top: 50%;
+    right: 30%;
     left:initial;
     animation-delay:1.4s ;
     animation-duration: 1.25s;
 }
 
 span.star:nth-child(9){
-    top: 0px;
-    right: 1000px;
+    top: 60%;
+    right: 100%;
     left:initial;
     animation-delay:0.75s ;
     animation-duration: 2.25s;
 }
 
 span.star:nth-child(10){
-    top: 0px;
-    right: 1000px;
+    top: 70%;
+    right: 100%;
     left:initial;
     animation-delay:2.75s ;
     animation-duration: 2.25s;
