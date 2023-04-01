@@ -4,10 +4,11 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Secret Santa Pairing</title>
+        <title>Mysterious Molvi Pairing</title>
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
+        <link rel="stylesheet" href="shooting-stars.css">
 
         <style>
 
@@ -25,23 +26,10 @@
             }
 
             body {
-                background: url(./assets/snow.png), url(./assets/santa.png), url(./assets/snow.png), radial-gradient(#FB3B3B, #EF3D3D);
-                background-repeat: repeat, no-repeat, repeat, no-repeat;
-
-                animation-name: snow;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-
-                font-family: 'Comic Sans MS';
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
 
-            @keyframes snow {
-                from { background-position: 130px 40px, bottom right, 0 0, 0 0; }
-                to { background-position: 130px 640px, bottom right, 0 300px, 0 0; }
-            }
-
-            .spirit-of-christmas {
+            .spirit-of-eid {
                 display: block;
 
                 position: absolute;
@@ -66,6 +54,14 @@
                 left: 0;
                 bottom: 0;
             }
+            .content-wrapper{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+            }
 
             .wrapper {
                 margin: auto;
@@ -73,14 +69,14 @@
 
                 background: repeating-linear-gradient(
                     45deg,
-                    #5CC48A,
-                    #5CC48A 30px,
-                    #FFFFFF 30px,
-                    #FFFFFF 60px,
-                    #EF3D3D 60px,
-                    #EF3D3D 90px,
-                    #FFFFFF 90px,
-                    #FFFFFF 120px
+                    #33716f,
+                    #33716f 30px,
+                    #aacfcc 30px,
+                    #aacfcc 60px,
+                    #64a2a1 60px,
+                    #64a2a1 90px,
+                    #aacfcc 90px,
+                    #aacfcc 120px
                 );
 
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
@@ -143,40 +139,52 @@
     <body>
 
         <div class="main">
+            <div class="background">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+            </div>
+            <div class="content-wrapper">
+                <div class="wrapper">
+                    <div class="content">
+                        <div class="title">Hi <span id="name"></span>! You've been paired with</div>
+                        <script> document.getElementById('name').innerText = name</script>
 
-            <div class="wrapper">
-                <div class="content">
+                        <div class="pairing">
+                            <div id="pairing-name"></div>
+                            <div id="pairing-details"></div>
+                            <script>
+                                document.getElementById('pairing-name').innerText = pairingDefinition[1];
 
-                    <div class="title">Hi <span id="name"></span>! You've been paired with</div>
-                    <script>document.getElementById('name').innerText = name</script>
+                                if (pairingDefinition[2]) {
+                                    document.getElementById('pairing-details').innerText = pairingDefinition[2];
+                                } else {
+                                    document.getElementById('pairing-details').style.display = 'none';
+                                }
+                            </script>
+                        </div>
 
-                    <div class="pairing">
-                        <div id="pairing-name"></div>
-                        <div id="pairing-details"></div>
+                        <div class="title">Good luck!</div>
+
                         <script>
-                            document.getElementById('pairing-name').innerText = pairingDefinition[1];
-
-                            if (pairingDefinition[2]) {
-                                document.getElementById('pairing-details').innerText = pairingDefinition[2];
-                            } else {
-                                document.getElementById('pairing-details').style.display = 'none';
+                            if (queryString.extra) {
+                                document.write('<iframe class="affiliate" src="http://rcm-eu.amazon-adsystem.com/e/cm?t=secrsant02e-21&o=8&p=48&l=ur1&category=books&banner=10DQAXJ7D1D2VTXMR682&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" frameborder="0"></iframe>');
                             }
                         </script>
+
                     </div>
-
-                    <div class="title">Good luck!</div>
-
-                    <script>
-                        if (queryString.extra) {
-                            document.write('<iframe class="affiliate" src="http://rcm-eu.amazon-adsystem.com/e/cm?t=secrsant02e-21&o=8&p=48&l=ur1&category=books&banner=10DQAXJ7D1D2VTXMR682&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" frameborder="0"></iframe>');
-                        }
-                    </script>
-
                 </div>
             </div>
 
-            <a href="http://arcanis.github.io/secretsanta/" class="spirit-of-christmas">
-                Want to start your own Secret Santa with your friends? Click here to get started!
+            <a href="http://notatiyyah.github.io/mysterious-molvi/" class="spirit-of-eid">
+                Want to start your own Mysterious Molvi with your friends? Click here to get started!
             </a>
 
         </div>
